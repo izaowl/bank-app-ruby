@@ -54,8 +54,8 @@ I want to see my bank statement wit hall details of withdrawals and deposits
 
 | Class         | Account                                                                    |
 |---------------|----------------------------------------------------------------------------|
-| Properties    | openingBalance, transactionHistory                                         |
-| Actions       | Constructor, deposit, withdraw, viewStatement, balance, _transactionAmount |                        |
+| Properties    | balance                                        |
+| Actions       | constructor, deposit, withdrawal, statement_output, _add_transaction_to_statement |                        |
 
 | Class         | Transaction                  |
 |---------------|------------------------------|
