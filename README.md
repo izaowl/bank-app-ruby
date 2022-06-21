@@ -1,18 +1,38 @@
 # banking-app-ruby
 
-I built a simple Banking App which calculates balance of the Bank Account. You can enter deposits and withdrawals and it will then print a statement with each transaction and the date when the transaction was entered.
-My code was developed in JavaScript and Node.js, tested using jest. In order to run it and it's tests please follow my instructions:
-### Preparing your machine to run my code using
-
-## Specification
+I built a simple Banking App which calculates balance of the Bank Account. You can enter deposits and withdrawals and it will then print a statement with each transaction and the date when the transaction was entered, latest transaction first.
+My code was developed in Ruby, tested using Rspec. In order to run it and it's tests please follow my instructions:
 
 ### Requirements
 
-- You should be able to interact with your code via a REPL like IRB or Node. (You don't need to implement a command line interface that takes input from STDIN.)
+- You should be able to interact with your code via a REPL like IRB. (You don't need to implement a command line interface that takes input from STDIN.)
 - Deposits, withdrawal.
 - Account statement (date, amount, balance) printing.
 - Data can be kept in memory (it doesn't need to be stored to a database or anything).
 
+### Preparing your machine to run my code
+- Clone the repo
+```
+git clone https://github.com/izaowl/bank-app-ruby.git
+```
+- Navigate to the directory "bank-app-ruby"
+- Install the Gems 
+```
+bundle install
+```
+### How to interract with my code
+
+* Open terminal and make sure you are in the main directory bank-app-ruby
+* paste this command into your terminal: irb -r ./lib/Account.rb
+* you can start interracting with my app by running the following commands and methods:
+
+```
+account = Account.new()           // to create new account
+account.deposit(1000)             // to deposit money
+account.account.deposit(2000)     // to withdraw money
+account.balance()                 // to obtain balance
+account.statement_output()        // to obtain statement
+```
 ### Acceptance criteria
 
 **Given** a client makes a deposit of 1000 on 10-01-2023  
@@ -28,6 +48,8 @@ date || credit || debit || balance
 10/01/2023 || 1000.00 || || 1000.00
 
 ```
+This screenshot illustrates this output:
+![Alt text](/images/Screenshot_of_IRB_output.png?raw=true "Ruby IRB output")
 
 ### User Stories
 
@@ -46,7 +68,7 @@ I want to be able to withdraw my money
 
 As person with Bank Account
 So I can make sure all transactions are correct
-I want to see my bank statement wit hall details of withdrawals and deposits
+I want to see my bank statement with all details of withdrawals and deposits
 ```
 
 ### Domain Model
