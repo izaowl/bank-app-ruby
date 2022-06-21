@@ -48,8 +48,12 @@ date || credit || debit || balance
 10/01/2023 || 1000.00 || || 1000.00
 
 ```
-This screenshot illustrates this output:
+This screenshot illustrates my output:
 ![Alt text](/images/Screenshot_of_IRB_output.png?raw=true "Ruby IRB output")
+
+### Test coverage
+![Alt text](/images/Screenshot_of_test_coverage.png?raw=true "Code coverage")
+
 
 ### User Stories
 
