@@ -81,17 +81,27 @@ I want to see my bank statement with all details of withdrawals and deposits
 | Class         | Account                                                                    |
 |---------------|----------------------------------------------------------------------------|
 | Properties    | balance                                        |
-| Actions       | constructor, deposit, withdrawal, statement_output, _add_transaction_to_statement |                        |
+| Actions       | constructor/initialize, deposit, withdrawal, statement_output, add_transaction_to_statement |                        
 
 | Class         | Transaction                  |
-|---------------|------------------------------|
+|---------------|------------------------------------------------------------------|
 | Properties    | date, amount, currentBalance |
-| Actions       | Constructor                  |
+| Actions       | constructor/initialize, debit_or_credit                          |
+
+
+| Module        | ValidateTransaction                  |
+|---------------|------------------------------------------------------------------|
+| Actions       | validate_deposit, validate_withdrawal                            |
 
 | Class         | BankStatement
-|---------------|---------------------------------------------------------------------------------------------------------------------------|
-| Properties    |   n/a                                                                                                                     | 
-| Actions       | printStatement, formatStatementOutput, formatEachTransaction, formatCreditTransaction , formatDebitTransaction, addHeader |
+|---------------|------------------------------------------------------------------|
+| Properties    | transaction_history     |
+| Actions       | constructor/initialize, add_transaction, display                 |
+
+
+| Module        | BankStatementEnablers                                            |
+|---------------|------------------------------------------------------------------|
+| Actions       | format_table, format_money_output, transaction_history_formatter |
 
 
 ### Edge cases added to my code and not included in initial requirements:
